@@ -12,13 +12,14 @@ interface Props {
 export const ItemsList: React.FC<Props> = ({ navigation }) => {
   const [data, setData] = useState([]);
   const navigationHooks = useNavigation();
+  const API_URL = process.env.BASE_API_URL || "http://localhost:1337";
   
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:1337/api/profissionals/?populate=%2A"
+          `${API_URL}api/profissionals/?populate=%2A`
         ); // Substitua pela URL do seu JSON
         const json = await response.json();
         setData(json.data);
