@@ -5,7 +5,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from './components/home';
 import Menu from './components/menu';
 import ItemDetails from './components/ItemDetails';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, AntDesign  } from '@expo/vector-icons';
+
+
+
 import { Image } from 'react-native';
 
 const Drawer = createDrawerNavigator();
@@ -41,6 +44,14 @@ const HomeStack = ({navigation}) => {
           headerTintColor: "white"
         }}
       />
+      <Stack.Screen name="Menu" component={Menu}  
+        options={{
+          headerTitle: "Meu Menu",
+          headerStyle: { backgroundColor: "#463FAF" },
+          headerTintColor: "white"
+        }}
+      />
+
     </Stack.Navigator>
   );
 };
@@ -49,8 +60,29 @@ export default function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={HomeStack} />
-        <Drawer.Screen name="Menu" component={Menu} />
+        <Drawer.Screen name="Home" component={HomeStack} 
+          options={{
+            drawerIcon: ({ focused, size }) => (
+              <Ionicons
+                name="home-outline"
+                size={size}
+                color={focused ? "#463FAF" : "#ccc"}
+              />
+            ),
+          }}
+        />
+        <Drawer.Screen name="Meu Menu" component={Menu} 
+          options={{
+            drawerIcon: ({ focused, size }) => (
+              <AntDesign 
+                name="user"
+                size={size}
+                color={focused ? "#463FAF" : "#ccc"}
+              />
+            ),
+          }}
+        
+        />
       </Drawer.Navigator>
     </NavigationContainer>
   );

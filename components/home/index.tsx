@@ -57,7 +57,7 @@ export default function Home({ navigation }) {
         </TouchableOpacity>
       </View>
 
-        <CategoriesHome></CategoriesHome>
+        <CategoriesHome />
 
       <View style={styles.contentHome}>
         <CarrosselHome  navigation={navigation}/>

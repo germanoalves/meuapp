@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "projeto-inicial",
+    "name": "Tools",
     "slug": "snack-80eaea9b-e0c7-465e-a145-9b6790c09ab6",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",

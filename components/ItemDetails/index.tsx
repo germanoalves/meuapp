@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 export default function ItemDetails({ route }) {
-  console.log("Route params:", route.params);
+ // console.log("Route params:", route.params);
   const { item } = route.params;
 
   return (
