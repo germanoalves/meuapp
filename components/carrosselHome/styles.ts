@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
   cardContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-  
+    
     
   },
   cardWrapper: {

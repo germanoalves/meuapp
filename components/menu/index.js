@@ -12,14 +12,14 @@ export default function Menu() {
         style={{
           flexDirection: "row",
           alignItems: "center",
-          paddingHorizontal: 10,
-          paddingVertical: 5,
+          paddingHorizontal: 15,
+          paddingVertical: 19,
           backgroundColor: "#463FAF"
         }}
         onPress={() => navigation.goBack()}
       >
         <Ionicons name="arrow-back" size={24} color="#fff" />
-        <Text style={{ fontSize: 18, color: '#fff', marginLeft: 10 }}>
+        <Text style={{ fontSize: 18, color: '#fff', marginLeft: 40, fontWeight: "500" }}>
           Meu Menu
         </Text>
       </TouchableOpacity>

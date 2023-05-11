@@ -4,26 +4,23 @@ import { CarrosselHome}  from '../carrosselHome';
 import { ItemsList } from '../ItemsList';
 import { ScrollView } from 'react-native-gesture-handler';
 import { styles } from './styles';
-import { CategoriesHome } from '../CategoriesHome';
+import  CategoriesHome  from '../CategoriesHome';
+import { StatusBar } from 'react-native';
 
 export default function Home({ navigation }) {
   const [input, setInput] = useState("");
 
   return (
     <View style={styles.container}>
+      <StatusBar
+    barStyle = "light-content"
+    hidden = {false}
+    backgroundColor = "#463FAF"
+    translucent = {false}
+    networkActivityIndicatorVisible = {true}
+/>
         <View style={styles.topHeader}>
-      <View style={styles.header}>
-        {/* <View>
-          <TouchableOpacity
-            style={{ paddingHorizontal: 10 }}
-            onPress={() => navigation.toggleDrawer()}
-          >
-            <Ionicons name="ios-menu" size={30} />
-          </TouchableOpacity>
-        </View> */}
-        {/* <View style={styles.logo}>
-          <Text>Logotipo do Projeto</Text>
-        </View> */}
+      <View style={styles.header}>       
       </View>
       <View>
         <TextInput
@@ -34,6 +31,7 @@ export default function Home({ navigation }) {
           underlineColorAndroid="transparent"
           value={input}
           placeholder="o que procuras?"
+          placeholderTextColor={'white'}
         />
       </View>
       </View>
@@ -43,7 +41,7 @@ export default function Home({ navigation }) {
             style={styles.menuIconUser}
             source={require("../../assets/images/user.png")}
           />
-          <Text>Se cadastrar</Text>
+          <Text style={{color: '#463FAF'}}>Se cadastrar</Text>
         </TouchableOpacity>
         <View>
           <Text>|</Text>
@@ -53,12 +51,10 @@ export default function Home({ navigation }) {
             style={styles.menuIconSearch}
             source={require("../../assets/images/search.png")}
           />
-          <Text>Prestadores</Text>
+          <Text style={{color: '#463FAF'}}>Prestadores</Text>
         </TouchableOpacity>
-      </View>
-
-        <CategoriesHome />
-
+      </View>        
+        <CategoriesHome navigation={navigation}/>
       <View style={styles.contentHome}>
         <CarrosselHome  navigation={navigation}/>
       </View>

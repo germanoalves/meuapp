@@ -8,9 +8,9 @@ export const styles = StyleSheet.create({
   
   topHeader: {
     backgroundColor: '#463FAF',
-    height: 80,
+    height: 135,
     borderBottomLeftRadius: 40,
-    borderBottomRightRadius: 40
+    borderBottomRightRadius: 40,
   },
 
   header: {
@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
     height: 35,
     marginLeft: 30,
     marginRight: 30,
-    marginTop: 15,
+    marginTop: 70,
     borderWidth: 1,
     borderRadius: 5,
     borderColor: '#fff',
@@ -96,7 +96,7 @@ export const styles = StyleSheet.create({
   },
 
   contentHome: {
-    marginTop: 30,
+    marginTop: -3,
     marginBottom: 10
   },
  

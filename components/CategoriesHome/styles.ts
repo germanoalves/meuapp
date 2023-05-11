@@ -3,24 +3,26 @@ import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
 
-    categories: {
-        flex: 1,
+   
+    categories: {        
         paddingLeft: 10,
         paddingBottom: 20,
-        marginTop: 40
+        marginTop: 20,        
+        height: 100,
+
     },
 
     categorieItemSingle: {
-        width: 120,
-        height: 100,
-        borderRadius: 50 ,
+               
+        borderRadius: 12 ,
         backgroundColor: '#463FAF',
-        paddingTop: 25,
-        paddingBottom: 25,
-        paddingLeft: 25,
+        height: 10,
+        paddingTop: 5,
+        paddingBottom: 5,
+        paddingLeft: 15,
         paddingRight: 25,
-        marginRight: 15,
-        flex: 2,
+        marginRight: 15,        
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'row',       
